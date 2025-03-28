@@ -86,7 +86,7 @@ See the `app/build.gradle.kts` file for a complete list of dependencies.
 
 ## License
 
-[License details to be added]
+[License details to be added](License)
 
 ## Contributors
 
