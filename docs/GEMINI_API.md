@@ -13,7 +13,7 @@ The Comeback app uses Google's Gemini API to dynamically generate funny rejectio
 The API key is defined in the `GeminiApiService.kt` file:
 
 ```kotlin
-private const val API_KEY = "AIzaSyBZ-_k9fpfbWh8hXNTelq-Onw46L6U42T4"
+private const val API_KEY = "TODO"
 private const val BASE_URL = "https://generativelanguage.googleapis.com/v1beta/"
 ```
 
