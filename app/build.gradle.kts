@@ -4,11 +4,14 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
+import java.util.Properties
+import java.io.FileInputStream
+
 // Read the API key from local.properties
-val localProperties = java.util.Properties().apply {
+val localProperties = Properties().apply {
     val localPropertiesFile = rootProject.file("local.properties")
     if (localPropertiesFile.exists()) {
-        load(java.io.FileInputStream(localPropertiesFile))
+        load(FileInputStream(localPropertiesFile))
     }
 }
 
