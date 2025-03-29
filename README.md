@@ -18,7 +18,7 @@ Comeback is a fun app built with Jetpack Compose that generates humorous "reject
 
 ## Screenshots
 
-[Screenshots will be added here]
+ [🔜]
 
 ## Technical Details
 
