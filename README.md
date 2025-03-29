@@ -58,7 +58,7 @@ The app includes hidden mini-games that can be triggered by tapping the app logo
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/comeback-app.git
+   git clone https://github.com/abhishek-maurya576/Comeback.git
    cd comeback-app
    ```
 
