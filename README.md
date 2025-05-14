@@ -18,18 +18,23 @@ Comeback is a fun app built with Jetpack Compose that generates humorous "reject
 - 🧭 **Onboarding Experience**: Smooth introduction for first-time users
 
 ## Screenshots
-### Smart Chat Interface
-<img src="docs/image/smart_chat_interface.jpg" alt="Smart Chat Interface" width="400"/>
+### 📱 Smart Chat Interface
 
-### Different Roast Types
-<img src="docs/image/mild_roast.jpg" alt="Mild Roast" width="250"/>
-<img src="docs/image/sarcastic_roast.jpg" alt="Sarcastic Roast" width="250"/>
-<img src="docs/image/savage_roast.jpg" alt="Savage Roast" width="250"/>
+| Smart Chat Interface |
+|----------------------|
+| <img src="docs/image/smart_chat_interface.jpg" alt="Smart Chat Interface" width="400"/> |
 
-### Message Interaction
-<img src="docs/image/sharing_options.jpg" alt="Sharing Options" width="250"/>
-<img src="docs/image/message_history.jpg" alt="Message History" width="250"/>
-<img src="docs/image/app_interface.jpg" alt="App Interface" width="250"/>
+### 🔥 Different Roast Types
+
+| Mild Roast | Sarcastic Roast | Savage Roast |
+|------------|------------------|--------------|
+| <img src="docs/image/mild_roast.jpg" alt="Mild Roast" width="250"/> | <img src="docs/image/sarcastic_roast.jpg" alt="Sarcastic Roast" width="250"/> | <img src="docs/image/savage_roast.jpg" alt="Savage Roast" width="250"/> |
+
+### 💬 Message Interaction
+
+| Sharing Options | Message History | App Interface |
+|-----------------|------------------|----------------|
+| <img src="docs/image/sharing_options.jpg" alt="Sharing Options" width="250"/> | <img src="docs/image/message_history.jpg" alt="Message History" width="250"/> | <img src="docs/image/app_interface.jpg" alt="App Interface" width="250"/> |
 
 ## Technical Details
 
