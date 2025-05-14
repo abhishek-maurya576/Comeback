@@ -28,6 +28,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Brush
 import androidx.compose.material.icons.rounded.Close
+import androidx.compose.material.icons.rounded.Chat
 import androidx.compose.material.icons.rounded.Edit
 import androidx.compose.material.icons.rounded.Language
 import androidx.compose.material.icons.rounded.Settings
@@ -181,6 +182,17 @@ fun HomeScreen(navController: NavController) {
                     text = "Create Personalized Message",
                     onClick = {
                         navController.navigate(Screen.CustomMessage.route)
+                    }
+                )
+                
+                Spacer(modifier = Modifier.height(8.dp))
+                
+                // Smart Chat Button
+                SettingsButton(
+                    icon = Icons.Rounded.Chat,
+                    text = "Smart Chat Mode (AI Comebacks)",
+                    onClick = {
+                        navController.navigate(Screen.Chat.route)
                     }
                 )
             }

@@ -7,10 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0-beta] - 2023-10-15
+
 ### Added
+- **Smart Chat Mode**: New interactive AI chat functionality using Google Gemini API
+  - Multiple personality options (Mild, Sarcastic, Savage)
+  - Rich text formatting with markdown support
+  - Message sharing capabilities
+  - Clean, modern UI with Material3 design
 - Comprehensive documentation in the `docs/` directory
 
+### Improved
+- Updated UI components across the application
+- Enhanced performance with Jetpack Compose optimizations
+- Improved error handling and network request management
+
+### Technical
+- Added Gemini API integration for Smart Chat Mode
+- Implemented compose-markdown library for text formatting
+- Expanded build configuration to support API key management
+- Updated target SDK to Android 35
+
 ## [1.0.0] - 2023-05-28
+
+### Initial Release
+- Core application functionality
+- Basic UI components and navigation
 
 ### Added
 - App onboarding experience for first-time users

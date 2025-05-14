@@ -25,8 +25,8 @@ android {
         applicationId = "com.org.comeback"
         minSdk = 24
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "2.0.0-beta"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         
@@ -100,6 +100,9 @@ dependencies {
     
     // DataStore Preferences
     implementation("androidx.datastore:datastore-preferences:1.0.0")
+    
+    // Markdown parser
+    implementation("com.github.jeziellago:compose-markdown:0.3.6")
     
     // Testing libraries
     testImplementation(libs.junit)

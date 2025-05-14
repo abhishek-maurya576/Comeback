@@ -8,6 +8,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.org.comeback.ui.screens.ChatScreen
 import com.org.comeback.ui.screens.CustomMessageScreen
 import com.org.comeback.ui.screens.HomeScreen
 import com.org.comeback.ui.screens.LanguageSelectionScreen
@@ -24,6 +25,7 @@ sealed class Screen(val route: String) {
     object CustomMessage : Screen("custom_message")
     object LanguageSelection : Screen("language_selection")
     object ThemeCustomization : Screen("theme_customization")
+    object Chat : Screen("chat")
 }
 
 @Composable
@@ -77,6 +79,10 @@ fun AppNavigation(navController: NavHostController) {
         
         composable(Screen.ThemeCustomization.route) {
             ThemeCustomizationScreen(navController = navController)
+        }
+        
+        composable(Screen.Chat.route) {
+            ChatScreen(navController = navController)
         }
     }
 } 

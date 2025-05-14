@@ -3,6 +3,7 @@ package com.org.comeback.data.api
 import android.util.Log
 import com.google.gson.annotations.SerializedName
 import com.org.comeback.BuildConfig
+import com.org.comeback.data.models.RoastType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Response
@@ -192,6 +193,64 @@ object GeminiApi {
             }
         } catch (e: Exception) {
             text
+        }
+    }
+    
+    // Function to generate a chat response based on user input
+    suspend fun generateChatResponse(userInput: String, roastType: RoastType): String {
+        Log.d(TAG, "Generating chat response for input: '$userInput' with roast type: $roastType")
+        
+        val personality = when (roastType) {
+            RoastType.MILD -> "friendly and gently teasing"
+            RoastType.SARCASTIC -> "sarcastic and witty"
+            RoastType.SAVAGE -> "savage but still humorous"
+        }
+        
+        val promptTemplate = """
+            Act like a $personality AI assistant that generates funny comebacks and roasts.
+            The user has sent the following message: "$userInput"
+            
+            Respond with a funny, ${roastType.displayName.lowercase()} comeback or roast.
+            Format your response using markdown syntax to emphasize important phrases.
+            Use **bold**, *italic*, or _underline_ for emphasis.
+            Use bullet points or numbered lists if appropriate.
+            
+            Keep it entertaining and not mean-spirited.
+            Include emojis where appropriate for extra personality.
+            Maximum length: 200 characters.
+        """.trimIndent()
+        
+        return try {
+            val request = GeminiRequest(
+                contents = listOf(
+                    Content(
+                        parts = listOf(
+                            Part(
+                                text = promptTemplate
+                            )
+                        )
+                    )
+                )
+            )
+            
+            Log.d(TAG, "Sending chat request to Gemini API...")
+            val response = service.generateContent(request = request)
+            Log.d(TAG, "Chat response received: isSuccessful=${response.isSuccessful}, code=${response.code()}")
+            
+            if (response.isSuccessful) {
+                val geminiResponse = response.body()
+                Log.d(TAG, "Chat response body: $geminiResponse")
+                val generatedText = geminiResponse?.candidates?.firstOrNull()?.content?.parts?.firstOrNull()?.text
+                Log.d(TAG, "Generated chat text: $generatedText")
+                
+                generatedText ?: "I would **roast** you, but it seems my creativity module failed. Must be *overwhelmed* by the roast material you provided. 😏"
+            } else {
+                Log.e(TAG, "API error in chat response: ${response.code()} - ${response.errorBody()?.string()}")
+                "Sorry, my sass generator is taking a *coffee break*. Try again when I've had my **caffeine**. ☕"
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Exception in chat API call", e)
+            "**Error 404:** Comeback not found. Even my *witty responses* can't handle your message. 🤷‍♂️"
         }
     }
 } 

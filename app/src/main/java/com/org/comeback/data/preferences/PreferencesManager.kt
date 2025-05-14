@@ -23,6 +23,7 @@ class PreferencesManager(private val context: Context) {
         val LANGUAGE_KEY = stringPreferencesKey("language")
         val THEME_COLOR_KEY = intPreferencesKey("theme_color")
         val ONBOARDING_COMPLETED_KEY = booleanPreferencesKey("onboarding_completed")
+        val AI_PERSONALITY_KEY = stringPreferencesKey("ai_personality")
     }
 
     // Theme preference
@@ -66,6 +67,17 @@ class PreferencesManager(private val context: Context) {
     suspend fun setOnboardingCompleted(completed: Boolean) {
         dataStore.edit { preferences ->
             preferences[ONBOARDING_COMPLETED_KEY] = completed
+        }
+    }
+    
+    // AI personality preference
+    val aiPersonality: Flow<String> = dataStore.data.map { preferences ->
+        preferences[AI_PERSONALITY_KEY] ?: "Sarcastic" // Default personality
+    }
+    
+    suspend fun setAiPersonality(personality: String) {
+        dataStore.edit { preferences ->
+            preferences[AI_PERSONALITY_KEY] = personality
         }
     }
 } 

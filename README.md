@@ -10,6 +10,7 @@ Comeback is a fun app built with Jetpack Compose that generates humorous "reject
 
 - 🚀 **Fake Compatibility Check**: Pretends to check if your device is compatible with the app
 - 🤣 **AI-Generated Humor**: Uses Gemini API to generate funny rejection messages
+- 💬 **Smart Chat Mode**: Engage in witty conversations with AI-generated comebacks in multiple styles
 - 🌐 **Multilingual Support**: Available in English, Spanish, French, and Hindi
 - 🎨 **Theme Customization**: Choose from various color themes and toggle dark mode
 - 👤 **Personalized Messages**: Create custom rejection messages including your name
@@ -18,7 +19,7 @@ Comeback is a fun app built with Jetpack Compose that generates humorous "reject
 
 ## Screenshots
 
-[Screenshots will be added here]
+[Screenshots include Smart Chat Mode with various roast types]
 
 ## Technical Details
 
@@ -34,9 +35,21 @@ The app follows MVVM (Model-View-ViewModel) architecture with a clean separation
 - **Navigation**: Compose Navigation
 - **State Management**: Flow, StateFlow with Compose State
 - **Networking**: Retrofit, OkHttp for API communication
-- **AI Integration**: Google Gemini API for content generation
+- **AI Integration**: Google Gemini API for content generation and Smart Chat responses
+- **Text Formatting**: Compose Markdown for rich text display
 - **Local Storage**: DataStore for user preferences
 - **Animations**: Compose animations and transitions
+
+## Smart Chat Mode
+
+The new Smart Chat Mode feature allows users to:
+- Exchange messages with an AI assistant that provides witty comebacks
+- Choose between three "roast" intensities: Mild, Sarcastic, and Savage
+- Share AI-generated responses with friends
+- View stylized responses with markdown formatting
+- Delete or clear message history
+
+See the [Smart Chat Mode documentation](./docs/SmartChatMode.md) for more technical details.
 
 ## Easter Eggs
 
@@ -58,8 +71,8 @@ The app includes hidden mini-games that can be triggered by tapping the app logo
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/comeback-app.git
-   cd comeback-app
+   git clone https://github.com/abhishek-maurya576/comeback.git
+   cd comeback
    ```
 
 2. Set up the Gemini API key
@@ -83,6 +96,12 @@ The app includes hidden mini-games that can be triggered by tapping the app logo
 
 ### Dependencies
 See the `app/build.gradle.kts` file for a complete list of dependencies.
+
+## Documentation
+
+- [User Guide](./docs/UserGuide.md) - How to use the app features
+- [Smart Chat Mode](./docs/SmartChatMode.md) - Technical details of the Smart Chat feature
+- [Changelog](./CHANGELOG.md) - Version history and release notes
 
 ## License
 
