@@ -18,19 +18,18 @@ Comeback is a fun app built with Jetpack Compose that generates humorous "reject
 - 🧭 **Onboarding Experience**: Smooth introduction for first-time users
 
 ## Screenshots
-
 ### Smart Chat Interface
-![Smart Chat Interface](docs/image/smart_chat_interface.jpg)
+<img src="docs/image/smart_chat_interface.jpg" alt="Smart Chat Interface" width="400"/>
 
 ### Different Roast Types
-![Mild Roast](docs/image/mild_roast.jpg)
-![Sarcastic Roast](docs/image/sarcastic_roast.jpg)
-![Savage Roast](docs/image/savage_roast.jpg)
+<img src="docs/image/mild_roast.jpg" alt="Mild Roast" width="250"/>
+<img src="docs/image/sarcastic_roast.jpg" alt="Sarcastic Roast" width="250"/>
+<img src="docs/image/savage_roast.jpg" alt="Savage Roast" width="250"/>
 
 ### Message Interaction
-![Sharing Options](docs/image/sharing_options.jpg)
-![Message History](docs/image/message_history.jpg)
-![App Interface](docs/image/app_interface.jpg)
+<img src="docs/image/sharing_options.jpg" alt="Sharing Options" width="250"/>
+<img src="docs/image/message_history.jpg" alt="Message History" width="250"/>
+<img src="docs/image/app_interface.jpg" alt="App Interface" width="250"/>
 
 ## Technical Details
 
