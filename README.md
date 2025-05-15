@@ -125,3 +125,5 @@ See the `app/build.gradle.kts` file for a complete list of dependencies.
 ## Contributors
 
 [Contributors to be added] 
+___
+Thanks for reading💌
