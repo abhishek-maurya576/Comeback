@@ -1,6 +1,6 @@
 # Comeback App
 
-An entertaining Android application that humorously claims to check if your device is compatible with the app (spoiler: it isn't).
+Comeback is a witty chat app designed to spice up your conversations. Whether you're looking to roast your friends, shut down arguments, or just have fun, Comeback has your back with smart, AI-powered responses.
 
 ## Overview
 
